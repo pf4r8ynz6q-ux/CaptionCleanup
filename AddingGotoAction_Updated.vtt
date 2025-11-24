@@ -1,0 +1,146 @@
+in this meeting,
+I'll show you how to create a go to action,
+jumps from the sample management simM BD
+to the quality division multitask screen.
+so first of all,
+we will create an action in the action repository
+and the action ID
+we can just call anyone,
+anything you like,
+but in this case I'll just call it as
+Iot QDMVD.
+go to since we will need to go to that view,
+just my.
+Interest,
+uh,
+go to,
+and for the mapping type we'll select the view ID which will be the view
+ID of the
+View which we want jump from,
+which is the same mat VD
+in the sample management screen.
+So we need to look for that
+view in this
+table here
+mat VD.
+and here's our view.
+Hey.
+And
+we can add a translation to.
+Make it looks
+better.
+Since we will jump to this quality decision
+I just call it as quality
+tests.
+OK.
+OK.
+And for the action type,
+we will need,
+need to change the action type to a go to action.
+And for the destination view ID
+since we need to jump from the sample management to the screen.
+And
+We will need to find in the configure
+we need to find the view type of that screen.
+Instead of the view,
+we need to find the
+Screen ID
+so that it jumps
+to the main view of that screen which will be this quality decision
+ILO QDMVD.
+that's the main view of this screen
+and uh our screen view type is queue decision 2
+view type and our variant is BF blah blah blah FQN SPSI queba default default.
+then,
+so
+in action repository destination view ID we need to look for that screen.
+Here we need to
+queue decision to view type.
+And our variant is this BFB1 blah blah blah.
+And the linking.
+For the linking,
+we will
+have to create a
+link.
+Via DD.
+So I've already created here.
+So,
+Since we need to link the sample management VD to this iLo blablabvd
+we need to
+Uh,
+create a connection via these foreign key columns in this
+Iot QDMVD.
+We need to create,
+uh,
+in my case.
+In this case,
+I'll create
+the connection is via this met ID
+and send MTVD rev key.
+And we can
+change the connections as you like.
+If you want to connect to via heat number or heat ID
+we can
+create a
+By doing the similar stuff
+Column
+number to
+And put it to here.
+they do the same trick
+or
+depending on how you want to link those two views.
+and.
+It's already created and generated already,
+so
+we can find this link in here.
+rev key to met ID
+just press OK
+and
+Save this action.
+and
+In this sample management screen.
+To
+assign that action.
+We just created.
+Um,
+for the go to
+Go to action,
+we'll usually
+find it here,
+I created before that was my.
+So usually we will right click on the query and there should be a
+go to action.
+So then we'll in assign action.
+We'll need to go to this context menu.
+And this go to jumps to find out what we created,
+which is this go to action.
+And put that down,
+the filter.
+Put the whole folder down to the filter.
+So your
+action will be here.
+then reopen the screen,
+Uh,
+You'll have this go to action to quality decision multi-screen,
+and of course,
+you'll need to
+export the permission.
+And import it to the
+Uh,
+Should be
+Put it off and.
+We'll need to reopen the
+open and the sample management screen.
+Now we have this go to folder
+and this is our
+new action created.
+Then I'll try to go go to the
+qualitization screen
+and find exactly the same material ID in that screen.
+to this 915 material.
+I'll go to,
+go to find a security lounge.
+just local ID equals to
+1601741915
+that'll be it for how to create a
+go to action.
