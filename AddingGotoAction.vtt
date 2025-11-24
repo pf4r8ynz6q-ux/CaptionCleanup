@@ -1,0 +1,445 @@
+﻿WEBVTT
+
+NOTE
+Kind: captions
+Source: Articulate Closed Captions Editor
+Source Version: 3.105.35604.0
+
+00:00:00.370 --> 00:00:01.490
+in this meeting,
+
+00:00:01.610 --> 00:00:04.550
+I'll show you how to create a go to action,
+
+00:00:04.929 --> 00:00:08.239
+jumps from the sample management simM BD
+
+00:00:08.970 --> 00:00:11.750
+to the quality division multitask screen.
+
+00:00:13.689 --> 00:00:14.670
+so first of all,
+
+00:00:14.930 --> 00:00:18.649
+we will create an action in the action repository
+
+00:00:18.879 --> 00:00:20.729
+and the action ID
+
+00:00:21.690 --> 00:00:23.549
+we can just call anyone,
+
+00:00:23.959 --> 00:00:24.750
+anything you like,
+
+00:00:25.030 --> 00:00:27.790
+but in this case I'll just call it as
+
+00:00:29.200 --> 00:00:31.260
+Iot QDMVD.
+
+00:00:31.649 --> 00:00:34.680
+go to since we will need to go to that view,
+
+00:00:35.880 --> 00:00:36.560
+just my.
+
+00:00:37.279 --> 00:00:37.950
+Interest,
+
+00:00:38.319 --> 00:00:39.150
+uh,
+
+00:00:39.310 --> 00:00:40.169
+go to,
+
+00:00:40.930 --> 00:00:45.689
+and for the mapping type we'll select the view ID which will be the view
+
+00:00:46.229 --> 00:00:47.500
+ID of the
+
+00:00:48.580 --> 00:00:51.520
+View which we want jump from,
+
+00:00:52.020 --> 00:00:54.279
+which is the same mat VD
+
+00:00:54.380 --> 00:00:56.680
+in the sample management screen.
+
+00:00:57.279 --> 00:01:00.040
+So we need to look for that
+
+00:01:00.619 --> 00:01:02.509
+view in this
+
+00:01:02.619 --> 00:01:03.919
+table here
+
+00:01:06.040 --> 00:01:07.099
+mat VD.
+
+00:01:09.540 --> 00:01:11.220
+and here's our view.
+
+00:01:17.190 --> 00:01:17.790
+Hey.
+
+00:01:19.620 --> 00:01:20.739
+And
+
+00:01:21.139 --> 00:01:23.180
+we can add a translation to.
+
+00:01:24.440 --> 00:01:25.779
+Make it looks
+
+00:01:26.000 --> 00:01:26.540
+better.
+
+00:01:28.230 --> 00:01:30.730
+Since we will jump to this quality decision
+
+00:01:31.860 --> 00:01:34.730
+I just call it as quality
+
+00:01:40.389 --> 00:01:40.940
+tests.
+
+00:01:44.449 --> 00:01:45.410
+OK.
+
+00:01:46.860 --> 00:01:47.690
+OK.
+
+00:01:49.209 --> 00:01:51.050
+And for the action type,
+
+00:01:51.169 --> 00:01:52.110
+we will need,
+
+00:01:52.529 --> 00:01:55.209
+need to change the action type to a go to action.
+
+00:01:55.910 --> 00:01:58.290
+And for the destination view ID
+
+00:01:58.860 --> 00:02:02.769
+since we need to jump from the sample management to the screen.
+
+00:02:03.830 --> 00:02:04.489
+And
+
+00:02:05.400 --> 00:02:08.660
+We will need to find in the configure
+
+00:02:09.520 --> 00:02:12.779
+we need to find the view type of that screen.
+
+00:02:13.210 --> 00:02:14.300
+Instead of the view,
+
+00:02:14.479 --> 00:02:15.619
+we need to find the
+
+00:02:16.449 --> 00:02:17.550
+Screen ID
+
+00:02:17.970 --> 00:02:19.309
+so that it jumps
+
+00:02:19.570 --> 00:02:23.160
+to the main view of that screen which will be this quality decision
+
+00:02:24.800 --> 00:02:26.429
+ILO QDMVD.
+
+00:02:27.929 --> 00:02:29.750
+that's the main view of this screen
+
+00:02:30.210 --> 00:02:33.979
+and uh our screen view type is queue decision 2
+
+00:02:34.250 --> 00:02:40.690
+view type and our variant is BF blah blah blah FQN SPSI queba default default.
+
+00:02:42.539 --> 00:02:43.320
+then,
+
+00:02:44.020 --> 00:02:44.589
+so
+
+00:02:44.779 --> 00:02:51.039
+in action repository destination view ID we need to look for that screen.
+
+00:02:52.330 --> 00:02:53.220
+Here we need to
+
+00:02:57.020 --> 00:02:57.899
+queue decision to view type.
+
+00:02:59.179 --> 00:03:03.740
+And our variant is this BFB1 blah blah blah.
+
+00:03:05.130 --> 00:03:06.029
+And the linking.
+
+00:03:06.410 --> 00:03:07.089
+For the linking,
+
+00:03:07.169 --> 00:03:07.960
+we will
+
+00:03:08.289 --> 00:03:09.750
+have to create a
+
+00:03:10.289 --> 00:03:10.809
+link.
+
+00:03:11.679 --> 00:03:12.899
+Via DD.
+
+00:03:13.520 --> 00:03:15.520
+So I've already created here.
+
+00:03:16.339 --> 00:03:16.910
+So,
+
+00:03:17.820 --> 00:03:24.039
+Since we need to link the sample management VD to this iLo blablabvd
+
+00:03:25.240 --> 00:03:26.259
+we need to
+
+00:03:27.910 --> 00:03:28.500
+Uh,
+
+00:03:28.520 --> 00:03:32.889
+create a connection via these foreign key columns in this
+
+00:03:33.199 --> 00:03:35.039
+Iot QDMVD.
+
+00:03:35.809 --> 00:03:36.639
+We need to create,
+
+00:03:36.649 --> 00:03:37.179
+uh,
+
+00:03:37.289 --> 00:03:38.630
+in my case.
+
+00:03:39.529 --> 00:03:40.429
+In this case,
+
+00:03:41.009 --> 00:03:42.369
+I'll create
+
+00:03:42.770 --> 00:03:45.589
+the connection is via this met ID
+
+00:03:46.050 --> 00:03:48.410
+and send MTVD rev key.
+
+00:03:50.419 --> 00:03:51.490
+And we can
+
+00:03:51.869 --> 00:03:53.580
+change the connections as you like.
+
+00:03:53.589 --> 00:03:57.710
+If you want to connect to via heat number or heat ID
+
+00:03:58.110 --> 00:03:58.729
+we can
+
+00:03:58.949 --> 00:03:59.610
+create a
+
+00:04:02.190 --> 00:04:03.570
+By doing the similar stuff
+
+00:04:09.270 --> 00:04:10.020
+Column
+
+00:04:11.190 --> 00:04:12.250
+number to
+
+00:04:13.389 --> 00:04:14.830
+And put it to here.
+
+00:04:16.428 --> 00:04:17.470
+they do the same trick
+
+00:04:17.670 --> 00:04:18.238
+or
+
+00:04:18.858 --> 00:04:21.630
+depending on how you want to link those two views.
+
+00:04:23.209 --> 00:04:23.899
+and.
+
+00:04:24.660 --> 00:04:27.640
+It's already created and generated already,
+
+00:04:27.660 --> 00:04:28.279
+so
+
+00:04:28.899 --> 00:04:31.019
+we can find this link in here.
+
+00:04:31.660 --> 00:04:33.709
+rev key to met ID
+
+00:04:34.410 --> 00:04:35.790
+just press OK
+
+00:04:36.260 --> 00:04:37.350
+and
+
+00:04:38.630 --> 00:04:40.160
+Save this action.
+
+00:04:47.359 --> 00:04:48.239
+and
+
+00:04:48.989 --> 00:04:50.730
+In this sample management screen.
+
+00:04:52.329 --> 00:04:52.890
+To
+
+00:04:53.130 --> 00:04:54.730
+assign that action.
+
+00:04:57.049 --> 00:04:58.339
+We just created.
+
+00:04:58.450 --> 00:04:59.010
+Um,
+
+00:05:00.130 --> 00:05:01.209
+for the go to
+
+00:05:02.350 --> 00:05:03.070
+Go to action,
+
+00:05:03.179 --> 00:05:03.850
+we'll usually
+
+00:05:04.429 --> 00:05:05.029
+find it here,
+
+00:05:10.959 --> 00:05:12.959
+I created before that was my.
+
+00:05:17.190 --> 00:05:21.769
+So usually we will right click on the query and there should be a
+
+00:05:22.019 --> 00:05:22.869
+go to action.
+
+00:05:24.130 --> 00:05:26.790
+So then we'll in assign action.
+
+00:05:31.209 --> 00:05:33.829
+We'll need to go to this context menu.
+
+00:05:35.010 --> 00:05:38.750
+And this go to jumps to find out what we created,
+
+00:05:38.850 --> 00:05:40.489
+which is this go to action.
+
+00:05:42.459 --> 00:05:44.380
+And put that down,
+
+00:05:44.570 --> 00:05:45.950
+the filter.
+
+00:05:49.589 --> 00:05:51.989
+Put the whole folder down to the filter.
+
+00:05:54.230 --> 00:05:55.190
+So your
+
+00:05:55.640 --> 00:05:56.850
+action will be here.
+
+00:06:06.130 --> 00:06:07.119
+then reopen the screen,
+
+00:06:09.500 --> 00:06:10.279
+Uh,
+
+00:06:24.070 --> 00:06:28.440
+You'll have this go to action to quality decision multi-screen,
+
+00:06:28.679 --> 00:06:29.399
+and of course,
+
+00:06:29.519 --> 00:06:30.660
+you'll need to
+
+00:06:31.079 --> 00:06:33.100
+export the permission.
+
+00:06:38.459 --> 00:06:40.940
+And import it to the
+
+00:06:42.670 --> 00:06:44.010
+Uh,
+
+00:06:49.989 --> 00:06:51.019
+Should be
+
+00:06:58.920 --> 00:07:00.570
+Put it off and.
+
+00:07:03.299 --> 00:07:05.600
+We'll need to reopen the
+
+00:07:24.410 --> 00:07:27.630
+open and the sample management screen.
+
+00:07:31.959 --> 00:07:33.579
+Now we have this go to folder
+
+00:07:34.100 --> 00:07:35.760
+and this is our
+
+00:07:36.200 --> 00:07:37.839
+new action created.
+
+00:07:38.640 --> 00:07:41.730
+Then I'll try to go go to the
+
+00:07:42.989 --> 00:07:44.850
+qualitization screen
+
+00:07:45.029 --> 00:07:49.290
+and find exactly the same material ID in that screen.
+
+00:07:52.970 --> 00:07:55.709
+to this 915 material.
+
+00:08:00.929 --> 00:08:01.910
+I'll go to,
+
+00:08:02.410 --> 00:08:03.869
+go to find a security lounge.
+
+00:08:05.779 --> 00:08:07.839
+just local ID equals to
+
+00:08:08.010 --> 00:08:11.630
+1601741915
+
+00:08:18.010 --> 00:08:20.589
+that'll be it for how to create a
+
+00:08:21.170 --> 00:08:21.929
+go to action.
+
