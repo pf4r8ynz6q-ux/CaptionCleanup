@@ -63,7 +63,3 @@ This is a small utility. If you find issues or want additional filtering pattern
 ## License
 This repository does not include an explicit license. If you plan to reuse or distribute this tool, consider adding
 a license file (for example MIT) to clarify reuse terms.
-
----
-If you want, I can also: add a `requirements.txt` (not needed currently), add example input/output files, or
-update `CaptionCleanup.py` to accept directory inputs and process multiple files. Which would you prefer next?
