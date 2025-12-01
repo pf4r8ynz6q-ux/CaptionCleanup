@@ -24,7 +24,7 @@ python CaptionCleanup.py --file "AddingGotoAction.vtt"
 Or run without the `--file` argument and you will be prompted to enter the caption file path:
 
 ```powershell
-python CaptionCleanup.py
+python caption_cleanup.py
 # Enter the Caption file to be updated, including FilePath: D:\path\to\file.vtt
 ```
 
@@ -37,7 +37,7 @@ python CaptionCleanup.py
 Run the script against the included sample file:
 
 ```powershell
-python CaptionCleanup.py --file "AddingGotoAction.vtt"
+python caption_cleanup.py --file "AddingGotoAction.vtt"
 # Output: Caption file AddingGotoAction_Updated.vtt was succesfully updated!
 ```
 
