@@ -63,3 +63,7 @@ This is a small utility. If you find issues or want additional filtering pattern
 ## License
 This repository does not include an explicit license. If you plan to reuse or distribute this tool, consider adding
 a license file (for example MIT) to clarify reuse terms.
+
+## Refactor History
+Notes														Date
+Added gitea repo as test for mirroring functionality		28.07.26
