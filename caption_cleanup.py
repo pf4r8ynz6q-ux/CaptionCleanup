@@ -3,7 +3,7 @@
 import argparse
 import re
 
-def remove_timestamp(filepath:str) -> None:
+def remove_timestamp(filepath: str) -> None:
     """
         Args:
             filepath: the path to the Input File.
@@ -20,7 +20,7 @@ def remove_timestamp(filepath:str) -> None:
                 Proofreading the end results is highly encouraged.
     """
     # 1. Patterns for metadata and timestamp lines to be removed
-    regex_patterns:list = [
+    regex_patterns: list = [
         # Header level Patterns at the start of the Caption
         r"WEBVTT",
         r"NOTE",
@@ -30,13 +30,11 @@ def remove_timestamp(filepath:str) -> None:
         r"^\d{2}:\d{2}:\d{2}.\d{3} --> \d{2}:\d{2}:\d{2}.\d{3}"
     ]
     # 2. Define output file name
-    output_file:str = filepath.replace('.vtt', '_Updated.vtt')
+    output_file: str = filepath.replace('.vtt', '_Updated.vtt')
 
     # 3. Pre-compile regex patterns and handle regex compilation errors
-    compiled_patterns = []
     try:
-        for p in regex_patterns:
-            compiled_patterns.append(re.compile(p))
+        compiled_patterns = [re.compile(p) for p in regex_patterns]
     except re.error as rex:
         print(f"Regex compilation error: {rex}")
         return
@@ -46,19 +44,8 @@ def remove_timestamp(filepath:str) -> None:
         with open(filepath, "r", encoding="utf-8") as in_file, \
              open(output_file, "w", encoding="utf-8") as out_file:
             for line in in_file:
-                # Strip leading/trailing whitespace (including newline) for clean checks
-                stripped_line:str = line.strip()
-                # Filter 1: Check for empty/blank lines (after stripping whitespace)
-                if not stripped_line:
-                    continue # Skip to the next line if the line is empty or only whitespace
-                # Filter 2: Check against compiled regex patterns
-                matched:bool = False
-                for pattern in compiled_patterns:
-                    if pattern.search(line):
-                        matched = True
-                        break
-                # If the line is not empty AND not matched by a regex pattern, write it.
-                if not matched:
+                # Skip empty lines and lines matching metadata/timestamp patterns
+                if line.strip() and not any(p.search(line) for p in compiled_patterns):
                     out_file.write(line)
         print(f"Caption file {output_file} was succesfully updated!")
     except FileNotFoundError:
@@ -66,23 +53,24 @@ def remove_timestamp(filepath:str) -> None:
     except IsADirectoryError:
         print(f"Expected a file but found a directory: {filepath}")
     except PermissionError:
-        print(f"Permission denied when accessing the file(s). \
-              Check read/write permissions for: {filepath} or {output_file}")
+        print(f"Permission denied when accessing the file(s). "
+              f"Check read/write permissions for: {filepath} or {output_file}")
     except UnicodeDecodeError:
-        print(f"Could not decode file using UTF-8. \
-              Try a different encoding or clean the file: {filepath}")
+        print(f"Could not decode file using UTF-8. "
+              f"Try a different encoding or clean the file: {filepath}")
     except OSError as os_err:
         # Catch other OS-related errors (e.g., disk full, I/O errors)
         print(f"I/O error while reading or writing files: {os_err}")
 
-if __name__ == "__main__":
-    input_file:str = ''
-    parser:argparse.ArgumentParser = argparse.ArgumentParser()
-    parser.add_argument('--file', type=str, default=None, help='Filepath to the Caption file')
-    args:argparse.Namespace = parser.parse_args()
-    if not args.file is None:
-        input_file = args.file
-    else:
-        # no File was given, so prompt the user
-        input_file = input("Enter the Caption file to be updated, including FilePath: ")
+def main() -> None:
+    """Main entry point for the script."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--file', type=str, default=None,
+                        help='Path to the Caption file. Can be absolute or relative. '
+                             'If not provided, the user will be prompted.')
+    args = parser.parse_args()
+    input_file = args.file or input("Enter the Path to the Caption file to be updated: ")
     remove_timestamp(input_file)
+
+if __name__ == "__main__":
+    main()
