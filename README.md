@@ -1,12 +1,13 @@
 # CaptionCleanup
-CaptionCleanup is a small Python utility that cleans WebVTT (.vtt) caption files by removing timestamp lines
+CaptionCleanup is a small Python utility that cleans WebVTT (.vtt) and/or SubRip (.srt) caption files by removing timestamp lines
 and common Articulate/Storyline-generated metadata. It produces a compact, human-readable caption file
 that is easier to review or repurpose for documentation and transcripts.
 
 ## Features
 - Removes WebVTT header lines such as `WEBVTT` and `NOTE` blocks
+- Removes SubRip (.srt) numeric cue sequence identifiers
 - Removes Storyline/Articulate metadata lines like `Kind: captions`, `Source: ...`, and `Source Version: ...`
-- Removes timestamp lines in the format `HH:MM:SS.mmm --> HH:MM:SS.mmm`
+- Removes timestamp lines in the format `HH:MM:SS.mmm --> HH:MM:SS.mmm` (supporting `.` and `,` separators)
 - Skips blank lines so the output is tightly packed and readable
 
 ## Requirements
@@ -18,27 +19,27 @@ No external dependencies are required. Clone or download this repository and run
 Example (PowerShell):
 
 ```powershell
-python CaptionCleanup.py --file "AddingGotoAction.vtt"
+python CaptionCleanup.py --file "AddingGotoAction.[srt/vtt]"
 ```
 
 Or run without the `--file` argument and you will be prompted to enter the caption file path:
 
 ```powershell
 python caption_cleanup.py
-# Enter the Caption file to be updated, including FilePath: D:\path\to\file.vtt
+# Enter the Path to the Caption file to be updated: D:\path\to\file.vtt
 ```
 
 ## Usage
-- Provide a `.vtt` file using the `--file` argument or when prompted interactively.
-- The cleaned file will be written to the same directory with `_Updated.vtt` appended to the input filename
-	(for example `AddingGotoAction.vtt` -> `AddingGotoAction_Updated.vtt`).
+- Provide a `.[srt/vtt]` file using the `--file` argument or when prompted interactively.
+- The cleaned file will be written to the same directory with `_Updated.[srt/vtt]` appended to the input filename
+	(for example `AddingGotoAction.[srt/vtt]` -> `AddingGotoAction_Updated.[srt/vtt]`).
 
 ### Example
 Run the script against the included sample file:
 
 ```powershell
-python caption_cleanup.py --file "AddingGotoAction.vtt"
-# Output: Caption file AddingGotoAction_Updated.vtt was succesfully updated!
+python caption_cleanup.py --file "AddingGotoAction.[srt/vtt]"
+# Output: Caption file AddingGotoAction_Updated.[srt/vtt] was succesfully updated!
 ```
 
 ## Notes & Behavior
@@ -48,7 +49,7 @@ python caption_cleanup.py --file "AddingGotoAction.vtt"
 	- `Kind: captions`
 	- `Source:(.*)`
 	- `Source Version:(.*)`
-	- Timestamp pattern `HH:MM:SS.mmm --> HH:MM:SS.mmm`
+	- Timestamp pattern `HH:MM:SS[,/.]mmm --> HH:MM:SS[,/.]mmm`
 - The patterns are intended to be conservative for Storyline-generated captions; if your captions contain
 	legitimate caption text that matches these patterns, edit `CaptionCleanup.py` to adjust or remove patterns.
 - If the input file is not found, the script prints a `File not found` message.
@@ -67,3 +68,4 @@ a license file (for example MIT) to clarify reuse terms.
 ## Refactor History
 Notes														Date
 Added gitea repo as test for mirroring functionality		28.07.26
+Added support for .srt conversion							24.09.26
