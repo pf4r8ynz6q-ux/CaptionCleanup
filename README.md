@@ -11,7 +11,8 @@ that is easier to review or repurpose for documentation and transcripts.
 - Skips blank lines so the output is tightly packed and readable
 
 ## Requirements
-- Python 3.7+
+- Python 3.13+
+- Pylint Score (10/10)
 
 ## Installation
 No external dependencies are required. Clone or download this repository and run the script with Python.
@@ -19,28 +20,14 @@ No external dependencies are required. Clone or download this repository and run
 Example (PowerShell):
 
 ```powershell
-python CaptionCleanup.py --file "AddingGotoAction.[srt/vtt]"
+python CaptionCleanup.py --file foo.[srt/vtt] or --file "D:\\Documents\\foo.[srt/vtt]"
 ```
-
-Or run without the `--file` argument and you will be prompted to enter the caption file path:
-
-```powershell
-python caption_cleanup.py
-# Enter the Path to the Caption file to be updated: D:\path\to\file.vtt
-```
+Or run without the `--file` argument and you will be prompted to enter the caption file path.
 
 ## Usage
 - Provide a `.[srt/vtt]` file using the `--file` argument or when prompted interactively.
 - The cleaned file will be written to the same directory with `_Updated.[srt/vtt]` appended to the input filename
 	(for example `AddingGotoAction.[srt/vtt]` -> `AddingGotoAction_Updated.[srt/vtt]`).
-
-### Example
-Run the script against the included sample file:
-
-```powershell
-python caption_cleanup.py --file "AddingGotoAction.[srt/vtt]"
-# Output: Caption file AddingGotoAction_Updated.[srt/vtt] was succesfully updated!
-```
 
 ## Notes & Behavior
 - The script uses a fixed set of regular expressions to remove header/metadata and timestamp lines. Current patterns include:
@@ -60,12 +47,14 @@ repository (`__CaptionCleanup.bat`) for Windows automation scenarios.
 
 ## Contributing
 This is a small utility. If you find issues or want additional filtering patterns, open an issue or submit a pull request.
-
-## License
-This repository does not include an explicit license. If you plan to reuse or distribute this tool, consider adding
-a license file (for example MIT) to clarify reuse terms.
+This tool currently Converts .srt and .vtt. For further extensions, open an issue.
 
 ## Refactor History
-Notes														Date
-Added gitea repo as test for mirroring functionality		28.07.26
-Added support for .srt conversion							24.09.26
+Notes														Date							Author
+Added gitea repo as test for mirroring functionality		28.07.26						jsenecal
+Added support for .srt conversion							24.09.26						jsenecal
+
+## Author / Contact
+Jason Senecal
+jsenecal@psi.de
+Copyright © 2026
